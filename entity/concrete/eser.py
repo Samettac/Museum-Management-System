@@ -1,8 +1,11 @@
+'''204210770 Rohullah Ghafoori
+204210786 Sayed suliman Torabi
+234210076 Samet Tasci'''
 from datetime import datetime
 
 from entity.abstract import BaseEntity
 
-
+# Eser Sınıfının bütün özellikleri kapsülleme ile korunuyor ve methodları data access katmanında yer alıyor.
 class Eser(BaseEntity):
     def __init__(self, eser_id: int, eser_adi: str, eser_yazari: str,
                  eser_tarihi: datetime, eser_aciklama: str):

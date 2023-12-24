@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eser</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sergi.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  </head>
+  <body>
+  {% include "header.html" %}
+
+    <div class="container">
+      <section class="eserler">
+        <div class="eser">
+          <div class="header">
+            <h1>{{ eser.eser_adi }}</h1>
+          </div>
+
+          <article class="content">
+            <div class="content-artist">
+              <h3>Sanatçı:</h3>
+              <p>{{ eser.eser_yazari }}</p>
+            </div>
+
+            <div class="content-date">
+              <h3>Tarihi: :</h3>
+              <p>{{ eser.eser_tarihi }}</p>
+            </div>
+
+            <div class="content-description">
+              <h3>Açıklama:</h3>
+              <p>{{ eser.eser_aciklama }}</p>
+            </div>
+          </article>
+          <a href="{{ url_for('edit_eser', id=eser.eser_id) }}">DÜZENLE</a>
+
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

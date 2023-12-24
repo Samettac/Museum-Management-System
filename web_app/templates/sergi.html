@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sergi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sergi.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  </head>
+  <body>
+  {% include "header.html" %}
+
+    <div class="container">
+      <section class="sergiler">
+        <div class="sergi">
+          <div class="header">
+            <h1>{{ sergi.sergi_adi }}</h1>
+          </div>
+          <article class="content">
+            <div class="content-header">
+              <h3>Tipi:</h3>
+              <p>{{ sergi.sergi_tipi }}</p>
+            </div>
+            <div class="content-description">
+              <h3>Açıklama:</h3>
+              <p>
+                {{ sergi.sergi_aciklama }}
+              </p>
+            </div>
+            <div class="content-eserler">
+              <ul>
+                {% for eser in sergi.sergideki_eserler %}
+                <li>
+                  <a href="{{ url_for('get_eser', id=eser.eser_id) }}"><h3>Eser Adı: {{ eser.eser_adi }}</h3></a>
+                </li>
+                {% endfor %}
+              </ul>
+              <a class="btn" href="{{ url_for('edit_sergi', id=sergi.sergi_id) }}">SERGİYİ DÜZENLE</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

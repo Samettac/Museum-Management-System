@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* HOME START */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto;
+    
+}
+
+.sergiler .sergi .header {
+    font-size: 1.5rem;
+    margin: 2rem 0.5rem;
+}
+
+.sergiler .sergi .content {
+    margin: 0rem 1rem;
+    padding: 1rem;
+}
+
+.sergiler .sergi .content-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;    
+}
+
+.sergiler .sergi .content-description {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.75rem;  
+}
+
+.sergiler .sergi .content-description p {
+    margin: 0px 0px 0.75rem 0.75rem;  
+}
+
+.sergiler .sergi .content-eserler {
+
+}
+
+.sergiler .sergi .content-eserler ul {
+    list-style: none;
+}
+
+.sergiler .sergi .content-eserler ul li a {
+    list-style: none;
+}
+

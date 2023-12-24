@@ -1,9 +1,12 @@
+'''204210770 Rohullah Ghafoori
+204210786 Sayed suliman Torabi
+234210076 Samet Tasci'''
 from datetime import datetime
 
 from entity.abstract import BaseEntity
 from .eser import Eser
 
-
+# Sergi Sınıfının bütün özellikleri kapsülleme ile korunuyor ve methodları data access katmanında yer alıyor.
 class Sergi(BaseEntity):
     def __init__(self, sergi_id: int, sergi_adi: str, sergi_tarihi: datetime, sergi_tipi: str,
                  sergi_aciklama, sergideki_eserler:list=[Eser]):

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Müze</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="home">
+        <aside class="sergiler">
+          <ul>
+            {% for sergi in sergi_list %}
+            <a href="{{ url_for('get_sergi', id=sergi.sergi_id) }}">
+              <li>{{ sergi.sergi_adi }}</li>
+            </a>
+            {% endfor %}
+            <br>
+            <a href="{{ url_for('add_sergi') }}">SERGİ EKLE</a> <br>
+          </ul>
+        </aside>
+
+        <main class="map">
+          <img src="../static/img/muze-harita.jpg" alt="" />
+        </main>
+      </section>
+    </div>
+  </body>
+</html>

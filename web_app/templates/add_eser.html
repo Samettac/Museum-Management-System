@@ -1,0 +1,14 @@
+{% extends "form.html" %}
+{% from 'bootstrap5/form.html' import render_form, render_field %}
+
+{% block title %}Eser Ekle{% endblock %}
+
+{% block heading %}Eser Ekle{% endblock %}
+{% include "header.html" %}
+
+{% block content %}
+    <div class="container">
+        {{ render_form(form, action=url_for('add_eser'), method='post') }}
+    </div>
+
+{% endblock %}

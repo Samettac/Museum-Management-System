@@ -1,7 +1,11 @@
+'''204210770 Rohullah Ghafoori
+204210786 Sayed suliman Torabi
+234210076 Samet Tasci'''
+
 from abc import ABC
 from .abc_entity_repository import AbcEntityRepository
 from entity import Eser
 
-
+# generic entitiy repository'ye eser sınıfı ile çalışacağını söylüyor ve onun sınıflarını kalıtım ile alıyor.
 class AbcEserDal(AbcEntityRepository[Eser], ABC):
     pass
